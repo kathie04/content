@@ -1,0 +1,116 @@
+<!DOCTYPE <html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="article, section, HTML5, HTML5 elements">
+	<meta name="description" content="HTML5 elements article and section">
+	<title>Article: HTML5 elements</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <article>
+  	<h1>A Look Into:<br>HTML5 &lt;article&gt; and &lt;section&gt; Elements</h1>
+	<p>By <a href="#link"><b>Thoriq Firdaus</b></a></p>
+	<p><a href="#link"><b>This article is part of our "HTML5/CSS3 Tutorials series" - dedicated to help make you a better designer and/or developer. Click here to see more articles from the same series.</b></a><br>
+  	<a href="#link">HTML5</a> comes with a bunch of <a href="#link">new elements</a> and more will be recommended in the future. However, there are some elements that might be a little confusing in their implementation, including the following two new elements: &lt;article&gt; and &lt;section&gt;.<br>
+	Some most frequently asked question I found in the forums are:<b> In what circumstances should we use these elements?</b> And <b>similarly How do we use this elements, correctly?</b><p>
+	<h3>Section Element</h3>
+	<p>This is probably one of the most ambiguous elements. How is it different to &lt;div&gt; element? All these years we have used &lt;div&gt; element for <b>sectioning</b> in our web structure, so when we should you this element apart from &lt;div&gt; element. To demystify it, we need to refer to the official documentation. According to <a href="#link">WHATWG documentation</a> the &lt;section&gt; is described as follows:<br>
+	<i>“The &lt;section&gt; element represents a generic section of a document or application. ~ WHATWG”</i><br>
+	<mark>From that description we can conclude that</mark> the &lt;section&gt; element is definitely intended for sectioning, more or less like a &lt;div&gt; element. But there is an exception for it. The documentation added some specific extra note that said:<br>
+	<i>“When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead…A general rule is that the section element is appropriate only if the element’s contents would be listed explicitly… ~ WHATWG”</i><br>
+	At this point, things got lighter and we can summarize that description in two points:</p>
+	<ul>
+  	  <li><b>First</b>, although the section element is technically style-able, but it is suggested to instead use &lt;div&gt; when we are more likely will apply heavy styles or script to the element.
+	  </li>
+  	  <li><b>Secondly</b>, similar to &lt;li&gt; element, <u>the general idea of section element</u> is to <b>list content</b>.
+      </li>
+	</ul>
+	<p>So in real cases, one of sensible reason to use &lt;section&gt; element is to structure list of blog post content, as shown in the following code snippet:</p>
+	<pre>
+&lt;div class="blog"&gt;
+	&lt;section class="post"&gt;
+		&lt;h2 class="post-title"&gt;Blog Post Title&lt;/h2&gt;
+		&lt;p class="post-excerpt"&gt;Ice cream tart powder jelly-o. 
+		Gummies chocolate cake ice cream cookie halvah tiramisu jelly-o.&lt;/p&gt;
+	&lt;/section&gt;
+	&lt;section class="post"&gt;
+		&lt;h2 class="post-title"&gt;Blog Post Title&lt;/h2&gt;
+		&lt;p class="post-excerpt"&gt;Ice cream tart powder jelly-o. 
+		Gummies chocolate cake ice cream cookie halvah tiramisu jelly-o.&lt;/p&gt;
+	&lt;/section&gt;
+	&lt;section class="post"&gt;
+		&lt;h2 class="post-title"&gt;Blog Post Title&lt;/h2&gt;
+		&lt;p class="post-excerpt"&gt;Ice cream tart powder jelly-o. 
+		Gummies chocolate cake ice cream cookie halvah tiramisu jelly-o.&lt;/p&gt;
+	&lt;/section&gt;
+&lt;/div&gt;
+	</pre>
+	<p>This is just an example, we can use this element for other purpose.</p>
+	<h3>Article Element</h3>
+	<p>The name itself is quite self explanatory, but let’s see how the official documentation describe it:<br>
+	<i>“A self-contained composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.“</i><br>
+	From the above explanation, we can conclude that &lt;article&gt; element is exclusively recommended to be used for <b>structuring article</b>, especially the article that most likely we are going to syndicate, such as a blog post, page content or forum posts.<br>
+  	<strike>The following example shows how we structure</strike> a blog post content with &lt;article&gt;.</p>
+	<pre>
+&lt;article class="post"&gt;
+	&lt;header&gt;
+	&lt;h1&gt;This is Blog Post Title&lt;/h1&gt;
+	&lt;div class="post-meta"&gt;
+		&lt;ul&gt;
+			&lt;li class="author"&gt;Author Name&lt;/li&gt;
+			&lt;li class="categories"&gt;Save in Categories&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;/header&gt;
+
+	&lt;div class="post-content"&gt;
+		Sweet roll halvah biscuit toffee liquorice tart pudding sesame snaps. 
+		Biscuit powder jelly-o fruitcake faworki chocolate bar. Pudding oat 
+		cake tootsie roll sesame snaps lollipop gingerbread bonbon. Gummies 
+		halvah gummies danish biscuit applicake gingerbread jelly-o pastry.
+	&lt;/div&gt;
+
+&lt;/article&gt;
+	</pre>
+	<p>Furthermore, the &lt;article&gt; element can be used in conjunction with section element, so the article can be divided into several sections with &lt;section&gt; element when the case is reasonable to do so, such as the example below.</p>
+	<pre>
+&lt;article class="post"&gt;
+	&lt;header&gt;
+	&lt;h1&gt;This is Blog Post Title&lt;/h1&gt;
+	&lt;div class="post-meta"&gt;
+		&lt;ul&gt;
+			&lt;li class="author"&gt;Author Name&lt;/li&gt;
+			&lt;li class="categories"&gt;Save in Categories&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;/header&gt;
+
+	&lt;div class="post-content"&gt;
+		&lt;section&gt;
+		&lt;h2&gt;This is the Sub-Heading&lt;/h2&gt;
+		Sweet roll halvah biscuit toffee liquorice tart pudding sesame snaps. 
+		Biscuit powder jelly-o fruitcake faworki chocolate bar. Pudding oat cake 
+		tootsie roll sesame snaps lollipop gingerbread bonbon. Gummies halvah 
+		gummies danish biscuit applicake gingerbread jelly-o pastry.
+		&lt;/section&gt;
+
+		&lt;section&gt;
+		&lt;h3&gt;This is another Sub-Heading&lt;/h3&gt;
+		Topping cheesecake sweet pie carrot cake sweet roll. Gummi bears lemon drops
+		toffee sesame snaps tart topping chupa chups apple pie gummies. Wafer chocolate
+		cake. Sugar plum chocolate bar topping ice cream carrot cake danish bonbon. 
+		Cheesecake gummi bears dragée jujubes dragée dragée brownie jelly biscuit. Powder croissant jelly beans pastry.
+		&lt;/section&gt;
+	&lt;/div&gt;
+
+&lt;/article&gt;
+
+
+	</pre>
+	<h3>Conclusion</h3>
+	<p>All the new elements in HTML5 are invented to make the web structure more Semantic as how the founder of World Wide Web and the director of W3C has prevised. There are still being debated among web developers and designers, thought, on how to apply these elements more correctly, some say this, other might say different.<br>
+	However, don’t get confused with the idea. As I have mentioned above, as long as, the case is reasonable to use them and you see that the structure is quite meaningful when you examine it, then go for it. After all, it does not matter at the end.</p>
+  </article>
+</body>
+</html>

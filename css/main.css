@@ -1,0 +1,28 @@
+article {
+  font-family: "Georgia", serif;
+  margin: 50px 100px;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+p, h3, li {
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+mark {
+  background-color: rgb(255,206,97);	
+}
+
+pre {
+  font-size: 16px;
+  line-height: 1.45;
+}
